@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!--style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style-->
+    
+    <style name="noform_dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><!--Theme.Light.NoTitleBar" <Theme.AppCompat.Light.NoActionBar">-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorPrimaryDark">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>    
+        
+    </style>
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.NoActionBar"><!--Theme.Light.NoTitleBar" <Theme.AppCompat.Light.NoActionBar">-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorPrimaryDark">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>    
+
+    </style>
+    <style name="StartTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorPrimaryDark">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>    
+        
+    </style>
+
+
+</resources>

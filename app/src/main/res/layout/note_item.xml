@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="10dp"
+	xmlns:ptr="http://schemas.android.com/apk/res-auto"
+	xmlns:circle="http://schemas.android.com/apk/res-auto"
+	android:background="@drawable/note_item_fillet"
+	android:orientation="vertical">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+
+			<com.noform.diaryofsuccess.CustomView.RoundCornersImageView
+				android:id="@+id/note_item_image"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/head"
+				ptr:is_round_cornersup="true"
+				ptr:roundHeight="8dp"
+				ptr:roundWidth="8dp" />
+		</LinearLayout>
+	</ScrollView>
+
+	<TextView
+		android:id="@+id/note_item_content"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:text="便签内容:"
+		android:textColor="#FFE0E0E0"
+		android:layout_margin="10dp"/>
+
+	<LinearLayout
+        android:id="@+id/note_item_listview"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp">
+
+		<!--ListView
+			android:id="@+id/note_item_listview"
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+            android:scrollbars="none"
+			android:login_background="#FF059ACA">
+
+		</ListView-->
+
+	</LinearLayout>
+
+	<View
+		android:background="?android:attr/dividerVertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center">
+
+		<TextView
+			android:id="@+id/note_item_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="2020年02月21日 12:59"
+			android:layout_margin="5dp"
+			android:textSize="10sp"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

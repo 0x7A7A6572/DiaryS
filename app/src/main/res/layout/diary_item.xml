@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="15dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginRight="40dp">
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="20/01/20"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:id="@+id/diary_date"
+					android:textColor="#FF464646"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="18:36"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="@color/deepblue"
+					android:id="@+id/diary_time"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/diary_content_view"
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="30dp"
+				android:layout_height="20dp"
+				android:layout_marginLeft="15dp"
+				android:clipChildren="true"
+				android:clipToPadding="true">
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_marginTop="15dp"
+					android:rotation="135"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:background="@color/dodgerblue"
+					android:id="@+id/diary_triangle"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/shape_rand"
+				android:id="@+id/diary_content_background">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:minHeight="30dp"
+					android:text="事迹"
+					android:textIsSelectable="false"
+					android:id="@+id/diary_DiaryContent"
+					android:textColor="#FFFFFFFF"
+					android:textSize="20sp"
+					android:layout_marginTop="15dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginBottom="10dp"
+					android:layout_marginRight="10dp"/>
+
+				<ImageView
+					android:id="@+id/diary_image"
+					android:layout_width="match_parent"
+					android:layout_height="100dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="15dp"
+					android:layout_marginBottom="15dp"
+					android:maxHeight="100dp"
+					android:scaleType="centerCrop"
+					android:visibility="gone"/>
+
+				<View
+					android:background="?android:attr/dividerVertical"
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:visibility="visible"/>
+
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginBottom="5dp">
+
+						<ImageView
+							android:src="@drawable/ic_map_marker"
+							android:layout_marginTop="5dp"
+							android:layout_width="18dp"
+							android:layout_height="18dp"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="18dp"
+							android:text="home"
+							android:textAppearance="?android:attr/textAppearanceSmall"
+							android:layout_marginLeft="5dp"
+							android:textColor="#FFFFFFFF"
+							android:id="@+id/diary_address"
+							android:textSize="10sp"
+							android:gravity="center"
+							android:layout_marginTop="5dp"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</FrameLayout>
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center"
+	android:padding="10dp"
+	android:windowSoftInputMode="stateVisible|adjustPan"
+	android:layout_gravity="bottom"
+	android:background="@drawable/dialog_top_fillet_background">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="left"
+			android:layout_margin="5dp"
+			android:gravity="center"
+			android:text="╳"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="新增日迹"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:text="确定"
+			android:layout_gravity="right"
+			android:layout_margin="5dp"
+			android:textColor="#FFFFFFFF"
+			android:paddingRight="15dp"
+			android:paddingLeft="15dp"
+			android:gravity="center"
+			android:background="@drawable/shape_rand"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp"
+			android:id="@+id/add_diary_button"/>
+
+	</FrameLayout>
+
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left">
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/dialog_image"
+				android:layout_width="wrap_content"
+				android:layout_height="100dp"
+				android:visibility="gone"
+				app:srcCompat="@drawable/ic_alarm_check"
+				android:src="@drawable/head"
+				android:scaleType="centerCrop"/>
+
+			<EditText
+				android:id="@+id/dialog_editText"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:background="@null"
+				android:hint="把你一天的收获留在这里..."
+				android:maxHeight="249dp"
+				android:maxLength="249" />
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="left">
+
+		<ImageButton
+			android:id="@+id/diary_add_image_for_system"
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:src="@drawable/ic_dialog_addimage"
+			android:tint="@color/grey"/>
+
+		<ImageButton
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:src="@drawable/ic_action_name"
+			android:tint="@color/grey"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="right"
+			android:gravity="right">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:text="0/249"
+				android:gravity="center"
+				android:id="@+id/dialog_text_count"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+
