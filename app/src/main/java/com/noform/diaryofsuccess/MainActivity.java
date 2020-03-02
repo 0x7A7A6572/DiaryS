@@ -351,7 +351,7 @@ public class MainActivity extends AppCompatActivity {
         Log.v("#debug", filePath);
         userJson = new io(filePath).read();
         if ("".equals(userJson)) {//数据空白
-            userJson = "[{\"diary_date\":\"00/00\",\"diary_time\":\"00:00\",\"diary_image\":\"null\",\"diary_DiaryContent\":\"想一想你今天做的事，编写你的成功日记吧！\\n *长按我可以删除和收藏哦\",\"diary_address\":\"null\",\"diary_numberOf\":1}]";
+            userJson = "[{\"diary_date\":\"00/00\",\"diary_time\":\"00:00\",\"diary_DiaryContent\":\"想一想你今天做的事，编写你的成功日记吧！\\n *长按我可以删除和收藏哦\",\"diary_address\":\"null\",\"diary_numberOf\":1}]";
             new io(filePath).writer(userJson);
         } else {//存在数据
 
