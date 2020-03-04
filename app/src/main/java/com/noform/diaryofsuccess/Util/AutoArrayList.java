@@ -4,21 +4,24 @@ import java.util.ArrayList;
 import java.util.stream.Stream;
 
 public class AutoArrayList extends ArrayList {
+
+	@Override
+	public Stream stream() {
+		return null;
+	}
+
+	@Override
+	public Stream parallelStream() {
+		return null;
+	}
+
     private int OriginalSize = 0;
     
     public void setOriginalSize(int originalSize) {
         OriginalSize = originalSize;
     }
     
-    @Override
-    public Stream stream() {
-        return this.stream();
-    }
-
-    @Override
-    public Stream parallelStream() {
-        return this.parallelStream();
-    }
+   
     
 
     
