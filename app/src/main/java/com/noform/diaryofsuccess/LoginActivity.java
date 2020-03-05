@@ -1,13 +1,16 @@
 package com.noform.diaryofsuccess;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.noform.diaryofsuccess.CustomView.NFDialog;
 import com.tencent.connect.common.Constants;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
@@ -55,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         CONTEXT = this.getApplicationContext();
+        inti();
         mTencent = Tencent.createInstance("101854186", CONTEXT);
         ImageButton im_qq = findViewById(R.id.im_qq);
         im_qq.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +74,22 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    private void inti() {
+       TextView userAgreement = findViewById(R.id.UserAgreement);
+       final NFDialog userAgreement_dialog = new NFDialog(
+                this,
+                -1, -1,
+                R.layout.user_agreement_dialog,
+                R.style.noform_dialog,false);
+       userAgreement.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               userAgreement_dialog.show();
+           }
+       });
 
     }
 

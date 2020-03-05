@@ -15,14 +15,19 @@ public class NFDialog extends Dialog {
     private static int default_height = -1;//默认高度
     private static int Layout_LoadView = R.layout.diary_dialog;
     private static int style_LoadView = R.style.noform_dialog;
+    private static boolean keyboard = true;
     public NFDialog(Context context) {
-        this(context, default_width, default_height, Layout_LoadView, style_LoadView);
+        this(context, default_width, default_height, Layout_LoadView, style_LoadView,keyboard);
     }
     public NFDialog(Context context, int layout, int style) {
-        this(context, default_width, default_height, layout, style);
+        this(context, default_width, default_height, layout, style,true);
     }
 
     public NFDialog(Context context, int width, int height, int layout, int style) {
+        this(context, width, height, layout, style,keyboard);
+    }
+
+    public NFDialog(Context context, int width, int height, int layout, int style,boolean keyboard) {
         super(context, style);
         setContentView(layout);
         Window window = getWindow();
@@ -34,7 +39,9 @@ public class NFDialog extends Dialog {
         params.width = (int) (width * density);
         params.height = (int) (height * density);
         params.gravity = Gravity.BOTTOM;
-        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE|WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        if(keyboard) {
+            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        }
         window.setAttributes(params);
     }
     private float getDensity(Context context) {

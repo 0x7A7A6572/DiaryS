@@ -14,13 +14,14 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="10dp"
+		android:background="#88FF9643"
 		android:hint="用户名/邮箱"
 		android:lines="1"
+		android:padding="10dp"
 		android:textColor="#ffffffff"
+		android:textColorHint="#A2A0A0"
 		android:textColorLink="#FFF2FFFC"
-		android:textColorHint="#FF444444"
-		android:background="#88FF9643"
-		android:textStyle="bold|italic|normal"/>
+		android:textStyle="bold|italic|normal" />
 
 	<EditText
 		android:id="@+id/et_password"
@@ -28,19 +29,21 @@
 		android:layout_height="wrap_content"
 		android:layout_below="@id/et_username"
 		android:layout_marginTop="10dp"
+		android:background="#7E1399FF"
 		android:hint="*****"
 		android:inputType="textPassword"
 		android:lines="1"
+		android:padding="10dp"
 		android:textColor="@color/black"
-		android:textColorHint="#FF414141"
-		android:background="#7E1399FF"
-		android:textStyle="bold|italic|normal"/>
+		android:textColorHint="#A7A5A5"
+		android:textStyle="bold|italic|normal" />
 
 	<LinearLayout
 		android:id="@+id/ly_1"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_below="@id/et_password"
+		android:gravity="right"
 		android:orientation="horizontal">
 
 		<TextView
@@ -48,14 +51,13 @@
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:layout_gravity="right"
-			android:layout_weight="1"
+			android:layout_marginRight="10dp"
 			android:gravity="right"
+			android:paddingTop="10dp"
+			android:paddingRight="10dp"
 			android:text="注册"
 			android:textColor="#FF039D14"
-			android:textSize="14sp"
-			android:layout_marginRight="10dp"
-			android:paddingTop="10dp"
-			android:paddingRight="10dp"/>
+			android:textSize="14sp" />
 
 	</LinearLayout>
 
@@ -95,12 +97,13 @@
 			android:textColor="#FFAAAAAA"/>
 
 		<TextView
+			android:id="@+id/UserAgreement"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
-			android:text="《用户使用协议》"
 			android:gravity="center_vertical"
+			android:text="《用户使用协议》"
 			android:textColor="#FF40CAFF"
-			android:textSize="13sp"/>
+			android:textSize="13sp" />
 
 		<TextView
 			android:layout_width="wrap_content"
