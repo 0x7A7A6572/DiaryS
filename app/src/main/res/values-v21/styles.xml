@@ -13,7 +13,7 @@
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><!--Theme.Light.NoTitleBar" <Theme.AppCompat.Light.NoActionBar">-->
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:colorPrimaryDark">@color/white</item>
         <item name="android:textColorPrimary">@color/black</item>    

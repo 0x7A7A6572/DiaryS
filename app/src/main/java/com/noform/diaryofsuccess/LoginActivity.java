@@ -18,6 +18,9 @@ import com.tencent.tauth.UiError;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.content.res.AssetManager;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class LoginActivity extends AppCompatActivity {
     Context CONTEXT;
@@ -78,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void inti() {
-       TextView userAgreement = findViewById(R.id.UserAgreement);
+       final TextView userAgreement = findViewById(R.id.UserAgreement);
        final NFDialog userAgreement_dialog = new NFDialog(
                 this,
                 -1, -1,
@@ -87,7 +90,23 @@ public class LoginActivity extends AppCompatActivity {
        userAgreement.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               
+               AssetManager am = getAssets();
+               
+               try {
+                  InputStream open = am.open("user_agreement.txt");
+                  byte b[] = new byte[1024];
+                  int len = 0;
+                  StringBuffer sb = new StringBuffer();
+                  while((len = open.read(b)) != -1){
+                      sb.append(new String(b,0,len));
+                  }
+                   userAgreement.setText(sb);
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
                userAgreement_dialog.show();
+               
            }
        });
 
