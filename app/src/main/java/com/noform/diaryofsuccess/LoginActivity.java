@@ -101,7 +101,8 @@ public class LoginActivity extends AppCompatActivity {
                   while((len = open.read(b)) != -1){
                       sb.append(new String(b,0,len));
                   }
-                   userAgreement.setText(sb);
+                 TextView cont_agree = findViewById(R.id.agreement_content);
+                 cont_agree.setText(sb);
                } catch (IOException e) {
                    e.printStackTrace();
                }
