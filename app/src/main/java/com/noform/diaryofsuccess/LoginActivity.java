@@ -25,6 +25,7 @@ import java.io.InputStream;
 public class LoginActivity extends AppCompatActivity {
     Context CONTEXT;
     private Tencent mTencent;
+    NFDialog userAgreement_dialog;
 
     String token;
     String expires_in;
@@ -82,36 +83,24 @@ public class LoginActivity extends AppCompatActivity {
 
     private void inti() {
        final TextView userAgreement = findViewById(R.id.UserAgreement);
-       final NFDialog userAgreement_dialog = new NFDialog(
+        userAgreement_dialog = new NFDialog(
                 this,
                 -1, -1,
                 R.layout.user_agreement_dialog,
                 R.style.noform_dialog,false);
        userAgreement.setOnClickListener(new View.OnClickListener() {
            @Override
-           public void onClick(View v) {
-               
-               AssetManager am = getAssets();
-               StringBuffer sb = new StringBuffer();
-               try {
-                  InputStream open = am.open("user_agreement.txt");
-                  byte b[] = new byte[1024];
-                  int len = 0;
-                  
-                  while((len = open.read(b)) != -1){
-                      sb.append(new String(b,0,len));
-                  }
-                 
-               } catch (IOException e) {
-                   e.printStackTrace();
-               }
+           public void onClick(View v) {  
                userAgreement_dialog.show();
-               TextView cont_agree = v.findViewById(R.id.agreement_content);
-
-               cont_agree.setText(sb);
+            
+           
            }
        });
 
+    }
+    
+    public void closeAgreementDialog(){
+        userAgreement_dialog.dismiss();
     }
 
     @Override
