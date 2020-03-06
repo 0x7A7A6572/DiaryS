@@ -92,22 +92,23 @@ public class LoginActivity extends AppCompatActivity {
            public void onClick(View v) {
                
                AssetManager am = getAssets();
-               
+               StringBuffer sb = new StringBuffer();
                try {
                   InputStream open = am.open("user_agreement.txt");
                   byte b[] = new byte[1024];
                   int len = 0;
-                  StringBuffer sb = new StringBuffer();
+                  
                   while((len = open.read(b)) != -1){
                       sb.append(new String(b,0,len));
                   }
-                 TextView cont_agree = findViewById(R.id.agreement_content);
-                 cont_agree.setText(sb);
+                 
                } catch (IOException e) {
                    e.printStackTrace();
                }
                userAgreement_dialog.show();
-               
+               TextView cont_agree = findViewById(R.id.agreement_content);
+
+               cont_agree.setText(sb);
            }
        });
 
