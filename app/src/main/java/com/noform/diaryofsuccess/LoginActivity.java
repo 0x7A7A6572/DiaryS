@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                    e.printStackTrace();
                }
                userAgreement_dialog.show();
-               TextView cont_agree = findViewById(R.id.agreement_content);
+               TextView cont_agree = v.findViewById(R.id.agreement_content);
 
                cont_agree.setText(sb);
            }
