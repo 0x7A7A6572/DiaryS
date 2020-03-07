@@ -150,6 +150,9 @@
     <color name="deepgreen">#4b995b</color><!--深绿 -->
     <color name="lightgray">#cccccc</color><!--亮灰色-->
     <color name="lightorange">#ff521d</color><!--亮橘色-->
+    <color name="whiteorange">#99cc7623</color><!--浅透橘色-->
+    <color name="whiteblue">#7E1399FF</color><!--浅透蓝色-->
+
 
 
 

@@ -5,19 +5,14 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@color/white"
 	android:orientation="vertical">
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-	</com.google.android.material.appbar.AppBarLayout>
 
 	<RelativeLayout
         android:id="@+id/mainView"
@@ -164,7 +159,7 @@
 				android:layout_marginRight="10dp">
 
 				<ImageView
-					android:src="@drawable/ic_ballot"
+					android:src="@drawable/all_select"
 					android:layout_width="50dp"
 					android:layout_height="50dp"
 					android:layout_margin="10dp"
@@ -185,7 +180,7 @@
 
 				<ImageView
 					android:id="@+id/activity_delItem"
-					android:src="@drawable/ic_delete_empty"
+					android:src="@drawable/del"
 					android:layout_width="50dp"
 					android:layout_height="50dp"
 					android:layout_margin="10dp"
@@ -212,7 +207,7 @@
 				android:layout_marginRight="10dp">
 
 				<ImageView
-					android:src="@drawable/ic_ballot_outline"
+					android:src="@drawable/not_all_select"
 					android:layout_width="50dp"
 					android:layout_height="50dp"
 					android:layout_margin="10dp"
@@ -222,15 +217,6 @@
 			</com.noform.diaryofsuccess.CustomView.CircleRelativeLayout>
 
 		</LinearLayout>
-
-		<ImageButton
-			android:id="@+id/set_main"
-			style="?android:attr/buttonBarButtonStyle"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_alignParentRight="true"
-			android:adjustViewBounds="true"
-			android:src="@drawable/ic_eslint" />
 
 	</RelativeLayout>
 

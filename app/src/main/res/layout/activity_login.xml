@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/login_background"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@color/orange"
 	android:paddingLeft="20dp"
 	android:paddingTop="100dp"
 	android:paddingRight="20dp"
-	android:paddingBottom="20dp"
-	android:background="#7EF1F1F1">
+	android:paddingBottom="20dp">
 
 	<EditText
 		android:id="@+id/et_username"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="10dp"
+		android:background="@drawable/shape_d_rand"
 		android:hint="用户名/邮箱"
 		android:lines="1"
 		android:padding="10dp"
-		android:textColor="#ffffffff"
-		android:textColorHint="#A2A0A0"
+		android:textColor="@color/white"
+		android:textColorHint="@color/gray"
 		android:textColorLink="#FFF2FFFC"
-		android:textStyle="bold|italic|normal"
-		android:background="@drawable/shape_rand"/>
+		android:textStyle="bold|italic|normal" />
 
 	<EditText
 		android:id="@+id/et_password"
@@ -29,14 +29,14 @@
 		android:layout_height="wrap_content"
 		android:layout_below="@id/et_username"
 		android:layout_marginTop="10dp"
+		android:background="@drawable/shape_d_rand"
 		android:hint="密码"
 		android:inputType="textPassword"
 		android:lines="1"
 		android:padding="10dp"
-		android:textColor="@color/black"
-		android:textColorHint="#A7A5A5"
-		android:textStyle="bold|italic|normal"
-		android:background="@drawable/shape_rand"/>
+		android:textColor="@color/white"
+		android:textColorHint="@color/gray"
+		android:textStyle="bold|italic|normal" />
 
 	<LinearLayout
 		android:id="@+id/ly_1"
@@ -56,8 +56,8 @@
 			android:paddingTop="10dp"
 			android:paddingRight="10dp"
 			android:text="注册"
-			android:textColor="#FF039D14"
-			android:textSize="14sp"/>
+			android:textColor="@color/red"
+			android:textSize="14sp" />
 
 	</LinearLayout>
 
@@ -70,32 +70,36 @@
 		android:layout_marginTop="35dp"
 		android:background="@drawable/shape_rand"
 		android:text="登陆"
-		android:textColor="@color/white"/>
+
+		android:textColor="@color/orange"
+		android:textSize="14sp"
+		android:textStyle="normal|bold|italic" />
 
 	<ImageButton
 		android:id="@+id/im_qq"
-		android:layout_width="50dp"
-		android:layout_height="50dp"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
 		android:layout_alignParentBottom="true"
 		android:layout_centerHorizontal="true"
 		android:background="@null"
 		android:scaleType="fitCenter"
-		android:src="@drawable/qq"/>
+		android:src="@drawable/qq" />
 
 	<LinearLayout
-		android:orientation="horizontal"
+		android:id="@+id/activityloginLinearLayout1"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@id/btn_login"
 		android:layout_margin="10dp"
-		android:id="@+id/activityloginLinearLayout1">
+		android:orientation="horizontal">
 
 		<CheckBox
+			android:theme="@style/CheckBoxStyle"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="同意并遵守"
-			android:textSize="13sp"
-			android:textColor="#FFAAAAAA"/>
+			android:textColor="@color/white"
+			android:textSize="13sp" />
 
 		<TextView
 			android:id="@+id/UserAgreement"
@@ -103,35 +107,28 @@
 			android:layout_height="match_parent"
 			android:gravity="center_vertical"
 			android:text="《用户使用协议》"
-			android:textColor="#FF40CAFF"
-			android:textSize="13sp"/>
-
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="match_parent"
-			android:text="全部内容"
-			android:gravity="center_vertical"
+			android:textColor="@color/yellow"
 			android:textSize="13sp"
-			android:textColor="#FFAAAAAA"/>
+			android:textStyle="bold" />
 
 	</LinearLayout>
 
 	<LinearLayout
-		android:orientation="horizontal"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_above="@id/im_qq"
 		android:layout_below="@id/activityloginLinearLayout1"
 		android:layout_centerHorizontal="true"
-		android:layout_above="@id/im_qq"
-		android:gravity="bottom"
 		android:layout_marginBottom="10dp"
 		android:clipChildren="false"
-		android:clipToPadding="false">
+		android:clipToPadding="false"
+		android:gravity="bottom"
+		android:orientation="horizontal">
 
 		<View
-			android:background="?android:attr/dividerVertical"
 			android:layout_width="100dp"
-			android:layout_height="1dp"/>
+			android:layout_height="1dp"
+			android:background="?android:attr/dividerVertical" />
 
 	</LinearLayout>
 

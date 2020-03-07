@@ -5,10 +5,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.noform.diaryofsuccess.CustomView.NFDialog;
 import com.tencent.connect.common.Constants;
@@ -63,6 +68,16 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Window window = this.getWindow();
+
+        //取消设置透明状态栏,使 ContentView 内容不再覆盖状态栏
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        //设置状态栏背景色
+        window.setStatusBarColor(0xffFFA500);
         CONTEXT = this.getApplicationContext();
         inti();
         mTencent = Tencent.createInstance("101854186", CONTEXT);
@@ -84,13 +99,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void inti() {
+        final RelativeLayout login_bg = findViewById(R.id.login_background);
         EditText et_name = findViewById(R.id.et_username);
         EditText et_psw = findViewById(R.id.et_password);
+        Button btn_login = findViewById(R.id.btn_login);
         //初始化布局
-        GradientDrawable nameShape = (GradientDrawable)et_name.getBackground();
-        GradientDrawable pswShape = (GradientDrawable)et_psw.getBackground();
-        nameShape.setColor(0x88FF9643);
-        pswShape.setColor(0x7E1399FF);
+        GradientDrawable loginShape = (GradientDrawable)btn_login.getBackground();
+        //GradientDrawable nameShape = (GradientDrawable)et_name.getBackground();
+        //GradientDrawable pswShape = (GradientDrawable)et_psw.getBackground();
+        //nameShape.setColor(0x99cc7623);
+        //pswShape.setColor(0x7E0377cc);
+        loginShape.setColor(0xfffcfcfc);
         
        final TextView userAgreement = findViewById(R.id.UserAgreement);
         userAgreement_dialog = new NFDialog(
@@ -106,6 +125,16 @@ public class LoginActivity extends AppCompatActivity {
            
            }
        });
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
+
+
 
     }
     

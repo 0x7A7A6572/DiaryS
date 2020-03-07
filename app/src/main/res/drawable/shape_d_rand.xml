@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--rectangle矩形-->
+    <!--圆角-->
+    <corners
+        android:radius="25dp"/>
+    <!--大小-->
+    <size android:width="5dp" android:height="5dp"></size>
+    <!--描边-->
+    <solid android:color="@color/whiteorange"></solid>
+
+</shape>
