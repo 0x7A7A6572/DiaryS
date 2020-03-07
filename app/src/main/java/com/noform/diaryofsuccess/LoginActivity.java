@@ -21,6 +21,8 @@ import org.json.JSONObject;
 import android.content.res.AssetManager;
 import java.io.IOException;
 import java.io.InputStream;
+import android.widget.EditText;
+import android.graphics.drawable.GradientDrawable;
 
 public class LoginActivity extends AppCompatActivity {
     Context CONTEXT;
@@ -82,6 +84,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void inti() {
+        EditText et_name = findViewById(R.id.et_username);
+        EditText et_psw = findViewById(R.id.et_password);
+        //初始化布局
+        GradientDrawable nameShape = (GradientDrawable)et_name.getBackground();
+        GradientDrawable pswShape = (GradientDrawable)et_psw.getBackground();
+        nameShape.setColor(0x88FF9643);
+        pswShape.setColor(0x7E1399FF);
+        
        final TextView userAgreement = findViewById(R.id.UserAgreement);
         userAgreement_dialog = new NFDialog(
                 this,
@@ -99,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
     
-    public void closeAgreementDialog(){
+    public void closeAgreementDialog(View v){
         userAgreement_dialog.dismiss();
     }
 

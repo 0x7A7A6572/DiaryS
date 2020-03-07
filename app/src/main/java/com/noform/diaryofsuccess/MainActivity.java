@@ -69,6 +69,7 @@ import java.util.List;
 import java.util.Random;
 
 import static android.provider.UserDictionary.Words.APP_ID;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_IMAGE = 0x7A7A ;
@@ -115,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
        // startActivity(new Intent(MainActivity.this, StartActivity.class));
         super.onCreate(savedInstanceState);  
         setContentView(R.layout.activity_main);
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
         CONTEXT = this.getApplicationContext();
         textViewOfClickItemCount = findViewById(R.id.textViewOfclickItemCount);
         mViewPager = findViewById(R.id.activityViewPager);
