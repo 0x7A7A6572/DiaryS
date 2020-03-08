@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void inti() {
-        final RelativeLayout login_bg = findViewById(R.id.login_background);
+        //final RelativeLayout login_bg = findViewById(R.id.login_background);
         EditText et_name = findViewById(R.id.et_username);
         EditText et_psw = findViewById(R.id.et_password);
         Button btn_login = findViewById(R.id.btn_login);
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
         //nameShape.setColor(0x99cc7623);
         //pswShape.setColor(0x7E0377cc);
         loginShape.setColor(0xfffcfcfc);
-        
+
        final TextView userAgreement = findViewById(R.id.UserAgreement);
         userAgreement_dialog = new NFDialog(
                 this,
@@ -119,10 +119,10 @@ public class LoginActivity extends AppCompatActivity {
                 R.style.noform_dialog,false);
        userAgreement.setOnClickListener(new View.OnClickListener() {
            @Override
-           public void onClick(View v) {  
+           public void onClick(View v) {
                userAgreement_dialog.show();
-            
-           
+
+
            }
        });
 
@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-    
+
     public void closeAgreementDialog(View v){
         userAgreement_dialog.dismiss();
     }
