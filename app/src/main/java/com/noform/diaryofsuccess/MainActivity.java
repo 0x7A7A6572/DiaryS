@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -41,6 +40,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -57,14 +57,6 @@ import com.noform.diaryofsuccess.Object.Note;
 import com.noform.diaryofsuccess.Util.ImageUtil;
 import com.noform.diaryofsuccess.Util.MD5;
 import com.noform.diaryofsuccess.Util.io;
-import com.tencent.connect.common.Constants;
-import com.tencent.tauth.IUiListener;
-import com.tencent.tauth.Tencent;
-import com.tencent.tauth.UiError;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -73,8 +65,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
-import static android.provider.UserDictionary.Words.APP_ID;
-import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_IMAGE = 0x7A7A ;
@@ -739,7 +729,7 @@ public class MainActivity extends AppCompatActivity {
             this, 
             -1, -1, 
             R.layout.diary_dialog,
-            R.style.noform_dialog);
+            R.style.noform_dialog,true);
 
         diary_dialog.show();
 

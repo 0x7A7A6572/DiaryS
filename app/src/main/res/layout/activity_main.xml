@@ -138,6 +138,8 @@
 			</LinearLayout>
 
 		</LinearLayout>
+        
+      
 
 		<LinearLayout
 			android:id="@+id/MultipleSelectionMode_bar"
@@ -202,7 +204,7 @@
 				android:layout_height="wrap_content"
 				android:gravity="center"
 				app:background_alpha="255"
-				app:background_color="@color/black"
+				app:background_color="@color/yellow"
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp">
 

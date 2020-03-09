@@ -15,16 +15,16 @@ public class NFDialog extends Dialog {
     private static int default_height = -1;//默认高度
     private static int Layout_LoadView = R.layout.diary_dialog;
     private static int style_LoadView = R.style.noform_dialog;
-    private static boolean keyboard = true;
+    private static boolean default_keyboard = true;
     public NFDialog(Context context) {
-        this(context, default_width, default_height, Layout_LoadView, style_LoadView,keyboard);
+        this(context, default_width, default_height, Layout_LoadView, style_LoadView,default_keyboard);
     }
     public NFDialog(Context context, int layout, int style) {
-        this(context, default_width, default_height, layout, style,true);
+        this(context, default_width, default_height, layout, style,default_keyboard);
     }
 
     public NFDialog(Context context, int width, int height, int layout, int style) {
-        this(context, width, height, layout, style,keyboard);
+        this(context, width, height, layout, style,default_keyboard);
     }
 
     public NFDialog(Context context, int width, int height, int layout, int style,boolean keyboard) {
